@@ -1,0 +1,20 @@
+{
+  "name": "keydown-linstener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c"
+  },
+  "homepage": "https://github.com/DBSDs/watermark-monitor",
+  "keywords": [
+    "keydown",
+    "linstener"
+  ],
+  "author": "op_chen",
+  "license": "MIT",
+  "devDependencies": {
+
+  }
+}

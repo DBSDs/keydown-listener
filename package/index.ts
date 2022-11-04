@@ -1,3 +1,3 @@
-import watermark from "./watermark";
+import keydownListener from "./core/keydownListener";
 
-export default watermark;
+export default keydownListener;
