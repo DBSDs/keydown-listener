@@ -4,7 +4,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import HomepageHeader from "../components/HomepageHeader";
-import watermark from "../../../package/index";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -15,8 +14,7 @@ export default function Home() {
     >
       <BrowserOnly fallback={<div>Loading...</div>}>
         {() => {
-          watermark.loadMark();
-          return <HomepageHeader watermark={watermark} />;
+          return <HomepageHeader />;
         }}
       </BrowserOnly>
     </Layout>

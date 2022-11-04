@@ -1,3 +1,3 @@
-import keydownListener from "./core/keydownListener";
+import registerListener from "./core/registerListener";
 
-export default keydownListener;
+export default registerListener;

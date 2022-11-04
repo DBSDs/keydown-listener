@@ -8,5 +8,8 @@
     "lib": ["DOM", "es2020"],
   },
   "include": ["package", "website"],
+  "paths": {
+    "package/*": ["package/*"]
+  },
   "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"],
 }

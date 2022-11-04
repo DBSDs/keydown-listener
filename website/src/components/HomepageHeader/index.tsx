@@ -3,13 +3,11 @@ import styles from "./styles.module.css";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import keydownListener from "../../../../package/index";
 
-function HomepageHeader(props) {
-  const { watermark } = props;
+function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  const [on, setOn] = React.useState<boolean>(true);
-  const [input, setInput] = React.useState<string>("测试水印");
-
+  const a = keydownListener();
   return (
     <>
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
@@ -20,15 +18,10 @@ function HomepageHeader(props) {
             <Link
               className="button button--secondary button--lg"
               onClick={(e) => {
-                if (on) {
-                  watermark.removeMark();
-                } else {
-                  watermark.loadMark({ watermark_txt: input });
-                }
-                setOn(!on);
+                console.log(a.events, a.keys);
               }}
             >
-              {on ? "移除水印" : "添加水印"}
+              移除水印
             </Link>
           </div>
         </div>
@@ -37,11 +30,6 @@ function HomepageHeader(props) {
         style={{ display: "flex", justifyContent: "center", padding: "10px" }}
       >
         <label>请输入水印内容：</label>
-        <input
-          className={styles.input}
-          value={input}
-          onChange={(e) => setInput(e.target["value"])}
-        />
       </div>
     </>
   );
