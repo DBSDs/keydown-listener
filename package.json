@@ -1,9 +1,9 @@
 {
   "name": "keydown-listener",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "dist/keydownListener.js",
-  "module": "dist/watermark.es.js",
+  "main": "dist/keydownListener.es.js",
+  "module": "dist/keydownListener.es.js",
   "scripts": {
     "test": "jest",
     "build": "rollup -c",
@@ -12,8 +12,8 @@
   },
   "homepage": "https://github.com/DBSDs/keydown-listener",
   "keywords": [
-    "watermark",
-    "webpage"
+    "keydown",
+    "linstener"
   ],
   "workspaces": [
     "package",

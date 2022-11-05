@@ -1,14 +1,11 @@
 
-
-<div align="center">
-  keydown-listener
-</div>
-
----
-
-<div align="center">
+# keydown-listener
 
 监听按键，返回web页面中按下的按键
+
+keydownListener for website, return an pressing keys array
+
+---
 
 <!-- [![npm download](https://img.shields.io/npm/dw/watermark-monitor)](https://www.npmjs.com/package/watermark-monitor)
 [![npm license](https://img.shields.io/npm/l/watermark-monitor)](https://www.npmjs.com/package/watermark-monitor)
@@ -42,4 +39,3 @@ console.log(keyGen.keys)
 ##  线上Demo
 
 * [在线预览](https://dbsds.github.io/keydown-listener/)
-

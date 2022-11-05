@@ -1,12 +1,6 @@
 name: Build and Deploy
 on: [push]
 jobs:
-  test:
-    runs-on: windows-latest
-    steps:
-      - name: test 
-        run: |
-          npm run test
   build:
     runs-on: windows-latest # The first job utilizes windows-latest
     steps:
@@ -17,6 +11,10 @@ jobs:
         run: |
           npm ci
           npm run build:site
+
+      - name: Test
+        run: |
+          npm run test
 
       - name: Upload Artifacts 🔺 # The project is then uploaded as an artifact named 'site'.
         uses: actions/upload-artifact@v1
