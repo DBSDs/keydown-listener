@@ -6,12 +6,15 @@ const events: KeyboardEvent[] = [];
 let isInit: boolean = true;
 
 function registerListener(options?: TRegisterOption): TKeyListener {
-  options &&
-    Object.keys(options).map((key) => {
+  if (options) {
+    Object.keys(defaultSettings).map((key) => {
       if (options[key] === undefined) {
         options[key] = defaultSettings[key];
       }
     });
+  } else {
+    options = { ...defaultSettings };
+  }
 
   function keydwonHandle(e: KeyboardEvent) {
     if (!keys.includes(e.key)) {
@@ -39,8 +42,8 @@ function registerListener(options?: TRegisterOption): TKeyListener {
   }
 
   if (isInit) {
-    options.element.addEventListener("keydown", keydwonHandle);
-    options.element.addEventListener("keyup", keyupHandle);
+    options.element?.addEventListener("keydown", keydwonHandle);
+    options.element?.addEventListener("keyup", keyupHandle);
     isInit = false;
   }
 
