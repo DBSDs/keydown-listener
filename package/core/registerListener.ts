@@ -1,11 +1,27 @@
-function registerListener(element: Element | Document = document) {
-  const keys: string[] = [];
-  const events: KeyboardEvent[] = [];
+import type { TRegisterOption, TKeyListener } from "./type";
+import { defaultSettings } from "./config";
+
+const keys: string[] = [];
+const events: KeyboardEvent[] = [];
+let isInit: boolean = true;
+
+function registerListener(options?: TRegisterOption): TKeyListener {
+  options &&
+    Object.keys(options).map((key) => {
+      if (options[key] === undefined) {
+        options[key] = defaultSettings[key];
+      }
+    });
 
   function keydwonHandle(e: KeyboardEvent) {
     if (!keys.includes(e.key)) {
-      events.push(e);
       keys.push(e.key);
+      events.push(e);
+      !!options.onkeydown &&
+        options.onkeydown({
+          keys,
+          events,
+        });
     }
   }
 
@@ -14,18 +30,26 @@ function registerListener(element: Element | Document = document) {
     if (keyIdx !== -1) {
       keys.splice(keyIdx, 1);
       events.splice(keyIdx, 1);
+      !!options.onkeydown &&
+        options.onkeydown({
+          keys,
+          events,
+        });
     }
   }
 
-  document.addEventListener("keydown", keydwonHandle);
-  document.addEventListener("keyup", keyupHandle);
+  if (isInit) {
+    options.element.addEventListener("keydown", keydwonHandle);
+    options.element.addEventListener("keyup", keyupHandle);
+    isInit = false;
+  }
 
   const KeyPressWatch = {
     keys,
     events,
     unbind: function () {
-      document?.removeEventListener("keydown", keydwonHandle);
-      document?.removeEventListener("keyup", keyupHandle);
+      options.element?.removeEventListener("keydown", keydwonHandle);
+      options.element?.removeEventListener("keyup", keyupHandle);
     },
   };
 

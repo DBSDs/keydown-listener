@@ -7,14 +7,14 @@ const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'watermark-monitor',
-  tagline: '网页水印组件，给你的网站上添加水印，防止被删除。',
+  title: 'keydown-listener',
+  tagline: 'keydown-listener Demo',
   url: 'https://dbsds.github.io',
-  baseUrl: '/watermark-monitor/',
+  baseUrl: '/keydown-listener/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  projectName: 'watermark-monitor', // Usually your repo name.
+  projectName: 'keydown-listener', // Usually your repo name.
   staticDirectories: [
     path.join(__dirname, 'static')
   ],
@@ -27,18 +27,6 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
         },
@@ -50,7 +38,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'watermark-monitor',
+        title: 'keydown-listener',
         items: [{
           href: 'https://github.com/DBSDs',
           position: 'right',
@@ -63,7 +51,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-  plugins: ['docusaurus-plugin-sass']
+  plugins: ['docusaurus-plugin-sass', './custom-webpack-alias']
 };
 
 module.exports = config;

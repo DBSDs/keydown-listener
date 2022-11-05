@@ -61,8 +61,8 @@ const prodPlugins = plugins.concat([
   filesize(),
   visualizer(),
   typescript({
-    // rollupCommonJSResolveHack: false,
     outDir: './types',
+    tsconfig: './tsconfig.prod.json',
     clean: true,
   })
 ]);
@@ -81,10 +81,18 @@ const withBase = (config) => Object.assign({}, base, config);
 
 export default [{
     output: [{
-      name: "WaterMark",
-      file: "dist/watermark.js",
-      format: "umd",
-    }].map(makeOutput),
+        name: "WaterMark",
+        file: "dist/keydownListener.js",
+        format: "umd",
+      },
+      {
+        file: "dist/watermark.es.js",
+        format: "es",
+      }, {
+        file: "dist/watermark.cjs.js",
+        format: "cjs",
+      },
+    ].map(makeOutput),
     plugins: prodPlugins,
   },
   // {

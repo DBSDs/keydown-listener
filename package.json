@@ -1,15 +1,16 @@
 {
-  "name": "watermark-monitor",
-  "version": "1.0.5",
+  "name": "keydown-listener",
+  "version": "1.0.0",
   "description": "",
-  "main": "dist/watermark.js",
+  "main": "dist/keydownListener.js",
+  "module": "dist/watermark.es.js",
   "scripts": {
     "test": "jest",
     "build": "rollup -c",
     "dev": "npm run dev --workspace=website",
     "build:site": "npm run build --workspace=website"
   },
-  "homepage": "https://github.com/DBSDs/watermark-monitor",
+  "homepage": "https://github.com/DBSDs/keydown-listener",
   "keywords": [
     "watermark",
     "webpage"

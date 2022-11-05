@@ -1,13 +1,13 @@
 {
-  "name": "keydown-linstener",
+  "name": "keydown-listener",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "module": "index.ts",
   "scripts": {
     "test": "jest",
     "build": "rollup -c"
   },
-  "homepage": "https://github.com/DBSDs/watermark-monitor",
   "keywords": [
     "keydown",
     "linstener"
