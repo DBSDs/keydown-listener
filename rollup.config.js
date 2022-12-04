@@ -80,16 +80,15 @@ const makeOutput = (config) => Object.assign({}, output, config);
 const withBase = (config) => Object.assign({}, base, config);
 
 export default [{
-    output: [
-      // {
-      //     name: "WaterMark",
-      //     file: "dist/keydownListener.js",
-      //     format: "umd",
-      //   },
-      {
-        file: "dist/keydownListener.es.js",
-        format: "es",
+    output: [{
+        name: "WaterMark",
+        file: "dist/keydownListener.js",
+        format: "umd",
       },
+      // {
+      //   file: "dist/keydownListener.es.js",
+      //   format: "es",
+      // },
       // {
       //     file: "dist/keydownListener.cjs.js",
       //     format: "cjs",

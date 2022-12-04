@@ -1,12 +1,13 @@
 {
   "name": "keydown-listener",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/keydownListener.es.js",
   "module": "dist/keydownListener.es.js",
   "scripts": {
     "test": "jest",
-    "build": "rollup -c",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && rollup -c --workspace=package",
     "dev": "npm run dev --workspace=website",
     "serve": "npm run serve --workspace=website",
     "build:site": "npm run build --workspace=website"
@@ -16,9 +17,13 @@
     "keydown",
     "linstener"
   ],
+  "typings": "dist/index.d.ts",
   "workspaces": [
     "package",
     "website"
+  ],
+  "files": [
+    "dist"
   ],
   "author": "op_chen",
   "license": "MIT",
