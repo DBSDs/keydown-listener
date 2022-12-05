@@ -1,9 +1,9 @@
 {
   "name": "keydown-listener",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
-  "main": "dist/keydownListener.es.js",
-  "module": "dist/keydownListener.es.js",
+  "main": "dist/keydownListener.js",
+  "module": "dist/keydownListener.js",
   "scripts": {
     "test": "jest",
     "clean": "rm -rf dist",
