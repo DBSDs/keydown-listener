@@ -9,7 +9,7 @@
   },
   "include": ["package", "website"],
   "paths": {
-    "package/*": ["package/*"]
+    "dist/*": ["dist/*"]
   },
   "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"],
 }

@@ -80,37 +80,19 @@ const makeOutput = (config) => Object.assign({}, output, config);
 const withBase = (config) => Object.assign({}, base, config);
 
 export default [{
-    output: [{
-        name: "WaterMark",
-        file: "dist/keydownListener.js",
-        format: "umd",
-      },
-      // {
-      //   file: "dist/keydownListener.es.js",
-      //   format: "es",
-      // },
-      // {
-      //     file: "dist/keydownListener.cjs.js",
-      //     format: "cjs",
-      //   },
-    ].map(makeOutput),
-    plugins: prodPlugins,
-  },
-  // {
-  //   output: [{
-  //       name: "WaterMark",
-  //       file: "dist/watermark.js",
-  //       format: "umd",
-  //     },
-  //     {
-  //       file: "dist/watermark.es.js",
-  //       format: "es",
-  //     },
-  //     {
-  //       file: "dist/watermark.cjs.js",
-  //       format: "cjs",
-  //     },
-  //   ].map(makeOutput),
-  //   plugins: devPlugins,
-  // },
-].map(withBase);
+  output: [{
+      name: "WaterMark",
+      file: "dist/index.js",
+      format: "umd",
+    },
+    // {
+    //   file: "dist/index.js",
+    //   format: "es",
+    // },
+    // {
+    //     file: "dist/index.cjs.js",
+    //     format: "cjs",
+    //   },
+  ].map(makeOutput),
+  plugins: prodPlugins,
+}].map(withBase);

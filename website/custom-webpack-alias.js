@@ -9,7 +9,7 @@ module.exports = function (context, options) {
       return {
         resolve: {
           alias: {
-            'package': resolve(__dirname, '../package/index.ts'),
+            'dist': resolve(__dirname, '../dist/index.js'),
           },
         },
       };

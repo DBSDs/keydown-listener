@@ -1,9 +1,9 @@
 {
   "name": "keydown-listener",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
-  "main": "dist/keydownListener.js",
-  "module": "dist/keydownListener.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "test": "jest",
     "clean": "rm -rf dist",
@@ -15,7 +15,10 @@
   "homepage": "https://github.com/DBSDs/keydown-listener",
   "keywords": [
     "keydown",
-    "linstener"
+    "keycode",
+    "react",
+    "vue",
+    "angular"
   ],
   "typings": "dist/index.d.ts",
   "workspaces": [

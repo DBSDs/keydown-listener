@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import keydownListener from "package";
+import keydownListener from "dist";
 
 function HomepageHeader() {
   // const { keydownListener } = props;
