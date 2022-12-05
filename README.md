@@ -5,7 +5,6 @@
 
 keydownListener for website, return an pressing keys array
 
----
 
 <!-- [![npm download](https://img.shields.io/npm/dw/watermark-monitor)](https://www.npmjs.com/package/watermark-monitor)
 [![npm license](https://img.shields.io/npm/l/watermark-monitor)](https://www.npmjs.com/package/watermark-monitor)
@@ -36,6 +35,11 @@ const keyGen = keydownListener()
 console.log(keyGen.keys)
 ```
 
+| 参数       | 说明     | 类型    | 默认值 | 
+|------------|--------|---------|--------|
+| element | 监听事件的DOM | Element | document  | 
+| onkeydown | 按下按键时的回调函数 | (val: {keys: string[], events: KeyboardEvent[]}) => void | undefined  |
+| onkeyup | 放开按键时的回调函数 | (val: {keys: string[], events: KeyboardEvent[]}) => void | undefined  |
 ##  线上Demo
 
 * [在线预览](https://dbsds.github.io/keydown-listener/)
