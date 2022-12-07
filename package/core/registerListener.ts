@@ -1,11 +1,11 @@
-import type { TRegisterOption, TKeyListener } from "./type";
+import type { RegisterOption, KeyDownListener } from "../";
 import { defaultSettings } from "./config";
 
-const keys: string[] = [];
-const events: KeyboardEvent[] = [];
+const keys: KeyDownListener["keys"] = [];
+const events: KeyDownListener["events"] = [];
 let isInit: boolean = true;
 
-function registerListener(options?: TRegisterOption): TKeyListener {
+function registerListener(options?: RegisterOption): KeyDownListener {
   if (isInit) {
     if (options) {
       Object.keys(defaultSettings).map((key) => {
@@ -46,7 +46,7 @@ function registerListener(options?: TRegisterOption): TKeyListener {
     }
   }
 
-  const KeyPressWatch = {
+  const KeyPressWatch: KeyDownListener = {
     keys,
     events,
     unbind: function () {
