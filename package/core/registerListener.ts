@@ -22,7 +22,7 @@ function registerListener(options?: RegisterOption): KeyDownListener {
   }
 
   function keydwonHandle(e: KeyboardEvent) {
-    if (!keys.includes(e.key)) {
+    if (!keys.includes(e.key) && e.getModifierState(e.key)) {
       keys.push(e.key);
       events.push(e);
       !!options.onkeydown &&

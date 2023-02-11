@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "declaration": true,
-    "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic"],
+    "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic", "jest"],
     "esModuleInterop": true,
     "jsx": "react",
     "lib": ["DOM", "es2020"],

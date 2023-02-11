@@ -1,3 +1,3 @@
-import type { TRegisterOption, TKeyListener } from "./type";
-declare function registerListener(options?: TRegisterOption): TKeyListener;
+import type { RegisterOption, KeyDownListener } from "../";
+declare function registerListener(options?: RegisterOption): KeyDownListener;
 export default registerListener;

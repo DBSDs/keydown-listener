@@ -1,2 +1,2 @@
-import type { TRegisterOption } from "./type";
-export declare const defaultSettings: TRegisterOption;
+import type { RegisterOption } from "../";
+export declare const defaultSettings: RegisterOption;
